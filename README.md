@@ -31,19 +31,27 @@ setup](https://docs.graderthan.com/workspace/create/).
    more details. 
 2. Use the code below as your install script for the dependency you created.
    
-    ```shell
-    # This installs the type-hinting and autocomplete tools
-    mkdir -p /tmp/vex
-    cd /tmp/vex
-    git clone https://github.com/graderthan/vex-v5-python-interface.git
-    pip install ./vex
+   ```shell
+   #!/bin/bash
+   rootdir=/tmp/vex
 
-    # This installs the official vex extension
-    chmod +x ./ext/install.sh
-    ./ext/install.sh
+   # Setup files
+   mkdir -p $rootdir
+   cd $rootdir
+   git clone https://github.com/graderthan/vex-v5-python-interface.git
+   cd ./vex-v5-python-interface
 
-    rm -rf /tmp/vex
-    ```
+   # Install the official vex extension in the background
+   chmod +x ./ext/install.sh
+   ./ext/install.sh &
+
+   # Install the type-hinting and autocomplete tools
+   pip install ./
+
+   # Wait for everything to complete and cleanup
+   wait
+   rm -rf $rootdir
+   ```
 
 3. **🥳 Done!** Now all your students and your course will have the Official Vex
    IDE extension and with full IDE support.
