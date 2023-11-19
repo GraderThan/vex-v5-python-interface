@@ -26,10 +26,11 @@ IDE extension and full IDE support for vex.
 **Prerequisites:** It is assumed you already have a [Grader Than Workspace
 setup](https://docs.graderthan.com/workspace/create/). 
 
-1. Create a dependency, see these
+1. Create a dependency, named `vex`. See these
    [docs](https://docs.graderthan.com/workspace/config/#create-a-dependency) for
-   more details. 
-2. Use the code below as your install script for the dependency you created.
+   more details on how to create a dependency. 
+2. Use the code below as your install script for the `vex` dependency you
+   created in step 1.
    
    ```shell
    #!/bin/bash
