@@ -7390,7 +7390,6 @@ class SmartDrive(DriveTrain):
         """
         return False
 
-
 __all__ = [
     "Accelerometer",
     "AddressableLed",
