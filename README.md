@@ -47,7 +47,15 @@ setup](https://docs.graderthan.com/workspace/create/).
    ./ext/install.sh &
 
    # Install the type-hinting and autocomplete tools
-   pip install ./
+
+   user_pip_path="/home/developer/Documents/code/.venv/bin/pip"
+   if [ -f "$user_pip_path" ]; then
+      source "/home/developer/Documents/code/.venv/bin/activate"
+      "$user_pip_path" install ./
+      deactivate
+   else
+      pip install ./
+   fi
 
    # Wait for everything to complete and cleanup
    wait
