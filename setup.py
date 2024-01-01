@@ -8,7 +8,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/graderthan/vex-v5-python-interface',
-    author='Harris Williams',
+    author='Grader Than Technology LLC',
     author_email='support@GraderThan.com',
     license='Grader Than LLC Academic Content License',
     install_requires=[],
